@@ -18,7 +18,7 @@
    ```bash
    git clone https://github.com/imantoua/docker-migration-tools.git
    cd docker-migration-tools
-````
+   ```
 
 2. **确保 Docker 已安装**：
    请确保新旧服务器都已安装 Docker，并且可以正常运行 Docker 容器。
@@ -66,7 +66,3 @@ chmod +x restore_run_all.sh
 ## License
 
 MIT License
-
----
-ManTou
-2026.01.22

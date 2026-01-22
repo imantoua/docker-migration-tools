@@ -46,16 +46,25 @@ scp docker_migrate_all_YYYY-MM-DD_HHMMSS.tgz user@target-server:/root/
 
 ### 3. 导入容器（目标服务器）
 
-在目标服务器上，解压并运行 `restore_run_all.sh` 脚本，恢复容器配置并启动容器。
+在目标服务器上，解压并运行 `docker_import_all.sh` 脚本，恢复镜像和卷。
 
 ```bash
 cd /root
 tar -xzf docker_migrate_all_YYYY-MM-DD_HHMMSS.tgz
+chmod +x docker_import_all.sh
+./docker_import_all.sh
+```
+
+### 4. 启动容器（目标服务器）
+
+在目标服务器上，运行 `restore_run_all.sh` 脚本来恢复容器并启动：
+
+```bash
 chmod +x restore_run_all.sh
 ./restore_run_all.sh
 ```
 
-### 4. 完成
+### 5. 完成
 
 容器将根据原配置自动启动，您可以使用 `docker ps` 查看运行中的容器。
 
@@ -66,3 +75,8 @@ chmod +x restore_run_all.sh
 ## License
 
 MIT License
+
+## Powered
+
+ManTou
+2026.01.22
